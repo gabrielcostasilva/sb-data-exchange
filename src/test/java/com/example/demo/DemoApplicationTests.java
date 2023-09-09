@@ -3,7 +3,6 @@ package com.example.demo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SpringBootTest
 class DemoApplicationTests {
 
-	@Value("classpath:data/store.yaml")
+	@Value("classpath:data/CD.xml")
 	Resource file;
 
 	@Autowired
@@ -26,15 +25,15 @@ class DemoApplicationTests {
 	void contextLoads() throws Exception {
 		assertNotNull(mapper);
 
-		Store store = 
+		CD aCD = 
 			mapper.readValue(
 					file.getInputStream(), 
-					Store.class);
+					CD.class);
 
-		System.out.println(store);
+		System.out.println(aCD);
 		
-		assertEquals(2, store.products().size());
-		assertNotEquals(3, store.products().size());
+		assertEquals("Empire Burlesque", aCD.title());
+		assertNotEquals("John Doe", aCD.title());
 	}
 
 }
