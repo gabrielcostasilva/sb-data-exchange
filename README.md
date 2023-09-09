@@ -1,6 +1,8 @@
 # SPRING BOOT DATA EXCHANGE - JSON
 Playground for managing different format files for data exchange with Spring Boot
 
+Please visit the [main branch](https://github.com/gabrielcostasilva/sb-data-exchange.git) to check out related projects.
+
 > This branch shows how to manage local JSON files
 
 ## Overview
