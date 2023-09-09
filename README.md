@@ -3,3 +3,4 @@ Playground for managing different format files for data exchange with Spring Boo
 
 This repository groups projects into branches as follows:
 - [json](https://github.com/gabrielcostasilva/sb-data-exchange/tree/json) shows how to manage local JSON files;
+- [yaml](https://github.com/gabrielcostasilva/sb-data-exchange/tree/yaml) extends the JSON project for managing YAML files.
